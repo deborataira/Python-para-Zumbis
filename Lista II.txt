@@ -1,0 +1,83 @@
+a = int(input('Lado a: '))
+b = int(input('Lado b: '))
+c = int(input('Lado c: '))
+if a > b + c or b > a + c or c > a + b:
+  print ('Um dos lados é maior que a soma dos outros')
+  print ('Senso assim não é um triângulo !')
+elif a == b == c: #a == b and b == c and a == c
+  print ('Triângulo Equilátero')
+elif a == b or b == c or a == c:
+  print ('Triângulo Isósceles')
+else:
+  print (' Triângulo Escaleno')
+
+
+
+a = int(input('Insira o ano para avaliação: '))
+if a % 4 == 0 and (a % 100 != 0 or a % 400 == 0):
+  print (' Ano bissexto')
+else:
+  print ('Não é ano bissexto')
+
+
+
+peso = float(input('Insira o peso do peixe: '))
+if peso > 50:
+    excesso = peso - 50
+    multa = excesso * 4
+else:
+    multa = excesso = 0
+
+print (f'Multa de R$ {multa:.2f}')
+print (f'Excesso: {excesso:.2f}')
+
+
+
+a = int(input('a: '))
+b = int(input('b: '))
+c = int(input('c: '))
+if a >= b and a >= c:
+    print (f'Maior: {a}')
+elif b >= c:
+    print (f'Maior: {b}')
+else:
+    print (f'Maior: {c}')
+
+  
+
+a = int(input('a: '))
+b = int(input('b: '))
+c = int(input('c: '))
+if a >= b and a >= c:
+    print (f'Maior: {a}')
+elif b >= c:
+    print (f'Maior: {b}')
+else:
+    print (f'Maior: {c}')
+
+if a <= b and a <= c:
+    print (f'Menor: {a}')
+elif b <= c:
+    print (f'Menor: {b}')
+else:
+    print (f'Menor: {c}')
+
+
+   
+valor = float(input('Valor ganho por hora: '))
+horas = int(input('Horas trabalhadas no mês: '))
+bruto = valor * horas
+IR = bruto * 0.11
+INSS = bruto * 0.08
+SINDACATO = bruto * 0.05
+liquido = bruto - ir - inss - sind
+print ('f + Salário Bruto: R$ {bruto:.2f}')
+print ('f  - Imposto de Renda: R$ {IR:.2f}')
+print ('f  - INSS: R$ {INSS:.2f}')
+print ('f - Sindicato: R$ {SINDICATO:.2f}')
+print ('f + Valor Líquido: R$ {liquido:.2f}')
+
+ '''nao entendi a ultima '''
+
+
+

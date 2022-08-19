@@ -1,0 +1,100 @@
+from random import sample
+vetor = sample(range(100), 10)
+maior = menor = vetor[0]
+x = 1
+while x < 10:
+  if vetor[x] > maior: maior = vetor[x]
+  if vetor[x] < menor: menor = vetor[x]
+  x = x + 1
+print ('vetor:', vetor)
+print (f'maior: {maior}')
+print (f'menor: {menor}')
+
+
+
+from random import sample
+vetor = sample(range(100), 20)
+pares = []
+ímpares = []
+for x in vetor:
+  if x % 2 == 0:
+    pares.append(x)
+  else:
+    ímpares.append(x)
+print ('vetor:', vetor)
+print ('pares:', pares)
+print ('impares:', ímpares)
+
+
+
+
+from random import randint
+v1 = []
+v2 = []
+vcj = []
+for k in range(10):
+  x = randint(1, 100)
+  v1.append(x)
+  vcj.append(x)
+  x = randint(1, 100)
+  v2.append(x)
+  vcj.append(x)
+print('primeiro vetor:', v1)
+print('segundo vetor:', v2)
+print('vetor conjunto:', vcj)
+
+
+
+
+
+texto = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()
+
+'''title - Maiscula e Minuscula
+upper - MAISCULA'''
+
+import string
+for d in string.punctuation:
+  texto = texto.replace(d, ' ')
+
+resp = []
+for p in texto.split():
+  if p[0] in 'python' or p[-1] in 'python':
+    resp.append(p)
+    
+print (resp)
+
+
+
+
+texto = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()
+
+'''title - Maiscula e Minuscula
+upper - MAISCULA'''
+
+import string
+for d in string.punctuation:
+  texto = texto.replace(d, ' ')
+   
+def python(x):
+  for d in x:
+    if d in 'python':
+      return True
+    return False
+'''se tirar o false faz a contagem com todas palavras'''
+resp = [p for p in texto.split()
+        if python(p) and len(p) > 4]
+'''len = numero de caracteres'''
+print (resp)
+print (len(resp))

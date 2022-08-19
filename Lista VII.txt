@@ -1,0 +1,53 @@
+def multstring(s, n):
+  return n * s
+
+
+def string_splosion(s):
+  return ''.join([s[:k] for k in range(len(s) + 1)])
+  resp = ''
+  for k in range(len(s)):
+    resp += s[:k]
+  resp += s
+  return resp
+  k = 1
+  resp = ''
+  while k <= len(s):
+    resp = resp + s[:k]
+    k = k + 1
+  return resp
+
+
+
+def array_count9(nums):
+  return nums.count(9)
+
+
+
+def array_front9(nums):
+  return 9 in nums[:4]
+
+
+def hello_name(name):
+  return f'Hello {name}!' 
+
+
+def make_tags(tag, word):
+  return f'<{tag}>{word}</{tag}>'
+
+
+def extra_end(s):
+  return 3 * s[-2:]
+
+
+
+def first_half(s):
+  return s[:len(s)//2]
+
+
+
+def sem_pontas(s):
+  return s[1:-1]
+
+
+def roda2(s):
+  return s[2:] + s[:2]

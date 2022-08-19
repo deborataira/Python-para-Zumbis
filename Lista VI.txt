@@ -1,0 +1,124 @@
+
+from random import randint
+
+maior = 0
+menor = 101
+
+for i in range(1,11):
+    x = randint(1,100)
+    print (x)
+    if maior > x:
+        maior = maior
+    elif maior < x:
+        maior = x
+    if menor < x:
+        menor = menor
+    elif menor > x:
+        menor = x
+print ("\nMaior número: ",maior)
+print ("\nMenor número: ",menor)
+
+
+
+
+from random import sample
+
+vetor = sample(range(1,100),20)
+pares = []
+ímpares = []
+
+for x in vetor:
+    if x % 2 == 0:
+        pares.append(x)
+    else:
+        ímpares.append(x)
+print ("TODOS OS NÚMEROS: ", vetor)
+print ("NÚMEROS PARES: ", pares)
+print ("NÚMEROS IMPARES: ", ímpares)
+
+
+
+
+from random import sample
+
+vetor1 = sample(range(1,100),10)
+vetor2 = sample(range(1,100),10)
+vetor3 = []
+
+for x in zip(vetor1,vetor2):
+    vetor3.extend(x)
+print(vetor1)
+print(vetor2)
+print(vetor3)
+
+
+
+x  = '''The Python Software Foundation and the global
+   Python community  welcome and encourage participation
+   by everyone. Our community is based on mutual respect,
+   tolerance, and encouragement, and we are working to
+   help each other live up to these principles. We want
+   our community to be more diverse: whoever you are, and
+   whatever your background, we welcome you.'''.lower()       
+
+import string
+for a in string.punctuation:                     
+  x = x.replace(a, ' ')                             
+
+tem = []
+for l in x.split():
+  if l[0] in 'python' or l[-1] in 'python':             
+                                                     
+    tem.append(l)                     
+
+print (tem)
+
+
+
+
+import string
+x = '''The Python Software Foundation and the global Python community welcome and encou
+    rage participation by everyone. Our community is based on
+    mutual respect, tolerance, and encouragement,
+    and we are working to help each other live up
+    to these principles. We want our
+    community to be more diverse: whoever you are, and
+    whatever your background, we welcome you.'''.lower()    
+
+for a in string.punctuation:                
+  x = x.replace(a, ' ')                 
+
+def l4(palavra):                     
+  for l4 in palavra:                  
+    if l4 in 'python':             
+      return True                    
+  return False                      
+
+y = []
+for p in x.split():                   
+  if l4(p) and len(p) > 4:             
+      y.append(p)  
+                                                              
+print (y)                      
+print (len(y))
+
+
+
+ 
+def dez(a, b):
+  return a == 10 or b == 10 or a + b == 10
+
+
+ 
+def dista10(n):
+  return abs(n - 100) <= 10 or abs(n - 200) <= 10
+
+
+ 
+def apaga(s, n):
+  return s[:n] + s[n+1:]
+ 
+
+
+def troca(s):
+  return s if len(s) <= 1 else s[-1] + s[1:-1] + s[0]
